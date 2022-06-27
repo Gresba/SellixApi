@@ -18,7 +18,7 @@ nav {
   margin: 0 auto;
   width: 80%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 nav>ul>li {
@@ -76,6 +76,8 @@ h3 {
 div.product-div>img {
   border-radius: 10px;
   width: 100%;
+  min-height: 210px;
+  max-height: 210px;
 }
 
 h4 {
@@ -89,12 +91,45 @@ p {
   padding-bottom: 20px;
 }
 
-@media screen and (max-width: 480px) {
+button {
+  margin: 20px auto;
+  display: block;
+  color: white;
+  background-color: #1363DF;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  color: black;
+}
+
+@media screen and (max-width: 645px) {
   .product-container {
     flex-direction: column;
   }
 
   .product-div {
     width: 100%;
+    margin-bottom: 20px;
+  }
+
+  input {
+    padding: 20px 10px;
+    border: none;
+    width: 100%;
+    justify-content: left;
+    order: 1
+  }
+
+  ul {
+    order: 0;
+  }
+
+  nav {
+    flex-wrap: wrap;
   }
 }
