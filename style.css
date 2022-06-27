@@ -110,10 +110,18 @@ button:hover {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  background-color: black;
-  height: 50px;
-  position: fixed;
+  background-color: #0f364e;
+  height: 75px;
+  bottom: 0;
+  position: absolute;
+}
+
+.footer-header {
+  text-align: center;
+  margin: 20px auto;
 }
 
 @media screen and (max-width: 645px) {
