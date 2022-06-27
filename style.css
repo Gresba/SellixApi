@@ -11,7 +11,7 @@ h1 {
 }
 
 span {
-    color: #47B5ff;
+  color: #1363DF;
 }
 
 nav {
@@ -48,4 +48,48 @@ li>a:hover {
   background-color: white;
   color: rgb(146, 190, 223);
   cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
+  padding: 20px;
+}
+
+h3 {
+  width: 100%;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-div {
+  background-color: #0f364e;
+  width: 30%;
+  border-radius: 10px;
+}
+
+div.product-div>img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+h4 {
+  margin: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 480px) {
+  .product-container {
+    flex-direction: column;
+  }
+
+  .product-div {
+    width: 100%;
+  }
 }
