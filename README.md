@@ -4,6 +4,8 @@
 
 SellixStore
 
+https://gresba.github.io/SellixApi/
+
 ## Project Description
 
 The project will be used for viewing and purchasing different products. The products will be hosted on [sellix](https://sellix.io/) which contains it's own backend. The product description, image, price, title and stock will be all pulled using a GET request to the /products endpoint for sellix.
