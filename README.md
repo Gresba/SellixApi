@@ -88,24 +88,19 @@ Api Key: Passed in as a header using Authorization
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+wireframe.jpeg
 
 ### MVP/PostMVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
-
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Load products from Sellix Api
+- Search products on page
+- Create a cool front-end
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
-
-- Add second API
-- Use local storage to save user favorites
+- Hide API Key
 
 ## Project Schedule
 
@@ -121,8 +116,21 @@ This schedule will be used to keep track of your progress throughout the week an
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
+Searches for a product on the dom
+
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+function search(event) {
+  let searchTerm = event.target.value;
+  console.log(searchTerm)
+  let products = document.querySelectorAll(".product-div");
+  products.forEach((product) => {
+    const title = product.dataset.title;
+    if (title.length === 0)
+      product.style.display = "block";
+    else if (!title.includes(searchTerm))
+      product.style.display = "none";
+    else
+      product.style.display = "block";
+  })
 }
 ```
